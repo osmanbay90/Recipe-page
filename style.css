@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap');
+
+:root {
+    font-size: 16px;
+    --dark-red-color:  hsl(332, 51%, 32%);
+    --nutmug-color: hsl(14, 45%, 36%);
+    --rose-white:  hsl(330, 100%, 98%);
+    --body-color: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --par-color: hsl(30, 10%, 34%);
+    --dark-grey: hsl(24, 5%, 18%);
+    --content-font: 'Outfit', sans-serif;
+    --header-font: 'Young Serif', serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6em;
+    padding-bottom: 4em;
+}
+main {
+    /* border: 2px solid red; */
+    max-width: 600px;
+    border-radius: 16px;
+    padding: 1.7em;
+    background-color: white;
+}
+
+ img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1em;
+}
+
+.recipe-header h1 {
+    font-family: var(--header-font);
+    font-weight: 400;
+    font-size: 1.9rem;
+    margin-bottom: 0.5em;
+}
+.per-details {
+    background-color: var(--rose-white);
+    padding: 1.5em;
+    line-height: 1.6;
+    font-family: var(--content-font);
+    margin-top: 1em;
+    border-radius: 10px;
+   
+}
+.per-details p {
+    font-size: 1.4rem;
+    font-family: var(--content-font);
+    margin-bottom: 0.3em;
+    color: var(--dark-red-color);
+    font-weight: 600;
+}
+.per-details li {
+    color: var(--par-color);
+    margin-left: 1.7em;
+    text-indent: 1em;
+}
+.per-details span {
+    color: var(--par-color);
+    font-weight: 900;
+}
+.ingre-detailsts {
+    margin-top: 1em;
+}
+.ingre-detailsts h2 {
+    color: var(--nutmug-color);
+    font-family: var(--header-font);
+    font-weight: 400;
+}
+::marker {
+    color: var(--dark-red-color);
+    font-weight: bold;
+}
+.ingre-detailsts li {
+    margin-left: 1.5em;
+    text-indent: 1em;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    color: var(--par-color);
+    font-family: var(--content-font);
+}
+hr {
+    margin-top: 1.3em;
+}
+.instruction-details  span {
+   color: var(--dark-grey);
+   font-weight: bold;
+}
+
+.instruction-details li  {
+    padding-left: 1em;
+    font-family: var(--content-font);
+    color: var(--par-color);
+    font-size: 0.86em;
+    line-height: 1.9em;
+    margin-left: 1.7em;
+}
+.instruction-details h2 {
+    color: var(--nutmug-color);
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+.table-header h2 {
+    color: var(--nutmug-color);
+    margin-top: 1em;
+    margin-bottom: 0.8em;
+    font-family: var(--header-font);
+    font-weight: 400;
+}
+.table-header p {
+    color: var(--par-color);
+    font-family: var(--content-font);
+    font-size: 0.86em;
+}
+table {
+    margin-top: 1em;
+    width: 100%;
+    border-collapse: collapse;
+    margin-left: 1.5em;
+    font-family: var(--content-font);
+    
+}
+table tr {
+    line-height: 2em;
+    border-bottom: 1px solid var(--light-grey);
+}
+td {
+    color: var(--par-color);
+}
+td:nth-child(2) {
+    color: var(--nutmug-color);
+    font-weight: 600;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0 0;
+        display: block;
+    }
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        border-radius: 0;
+        padding-bottom: 1em;
+    }
+    img {
+        border-radius: 0;
+    }
+    .recipe-header h1 {
+        padding-left: 0.7em;
+    }
+    .per-details, .ingre-detailsts, .table-header, .nutration-table, .instruction-details, .recipe-header :not(img, h1) {
+        padding: 0 1.5em;
+    }
+}
